@@ -1,0 +1,81 @@
+<!-- Coding/Commenting Done By Pavi Vijeyarajah -->
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST"> <!--Value Is What Section Of Database Is Being Updated-->
+                <div class="form-group">
+                    <label for="nameTextField">Name</label> <!-- Searches Name Value And Updates -->
+                    <input type="text" class="form-control"
+                    id="nameTextField" 
+                    placeholder="Enter the name"
+                    name="Name" 
+                    value="<%= Item.Name %>" 
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sportTextField">Sport</label> <!-- Searches Sport Value And Updates -->
+                    <input type="text" class="form-control"
+                    id="sportTextField"
+                    placeholder="Enter the sport name"
+                    name="Sport" 
+                    value="<%= Item.Sport %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="enddateTextField">End Date</label> <!-- Searches EndDate Value And Updates -->
+                    <input type="text" class="form-control"
+                    id="enddateTextField"
+                    placeholder="Enter the end of event ex. 10 Sep 1999"
+                    name="EndDate" 
+                    value="<%= Item.EndDate %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startdateTextField">Start Date</label> <!-- Searches StartDate Value And Updates -->
+                    <input type="text" class="form-control"
+                    id="startdateTextField"
+                    placeholder="Enter the start of event ex. 10 Sep 1999"
+                    name="StartDate" 
+                    value="<%= Item.StartDate %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="typeTextField">Type</label> <!-- Searches Type Value And Updates -->
+                    <input type="text" class="form-control"
+                    id="typeTextField"
+                    placeholder="Enter the type of tournament"
+                    name="Type" 
+                    value="<%= Item.Type %>"
+                    required>
+                </div>
+
+                 
+
+                <button class="btn btn-primary" type="submit"> <!-- Submission Of Updated Data -->
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/itemlist" class="btn btn-warning"> <!-- Cancellation Of Updated Data -->
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>

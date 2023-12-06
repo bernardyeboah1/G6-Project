@@ -1,0 +1,48 @@
+<!-- Coding/Commenting Done By Bernard Yeboah-->
+<!-- Calling Saved Code From /partails -->
+<%- include partials/header.ejs%>
+<%- include partials/main_nav.ejs%>
+  <main>
+  <br>
+
+  <!-- Code For Title Box -->
+  <div class = "jumbotron jumbotron-fluid text-center bg-dark text-white mb-0">
+    <div class = "container-fluid p-6">
+      <h1 class = "display-6 font-weight-bold"> <%= title %> </h1>
+      <p class = "lead font-weight-bold"> We'll Get Back To You As Soon As We Can! </p>
+      <br>
+    </div>
+  </div>
+
+
+  <!-- Contact Form -->
+  <div class="container contact-form">
+    <form>
+      <!-- Label And Input For Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label> 
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+      </div>
+
+      <!-- Label And Input For Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Your Email">
+      </div>
+
+      <!-- Label And Input For Message -->
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+      </div>
+
+      <!-- Button For Submission -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- Contact Form End -->
+
+<!-- Calling Saved Code From /partials -->
+<%- include partials/bottom_nav.ejs%>
+<%- include partials/footer.ejs%>
+

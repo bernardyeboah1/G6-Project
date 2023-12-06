@@ -1,0 +1,167 @@
+<!-- Coding/Commenting Done By Vaibhav Patel On This index.ejs -->
+
+<!-- Calling Saved Code From /partials -->
+<%- include partials/header.ejs%>
+<%- include partials/main_nav.ejs%>
+
+<!-- Code For Everything Visible On The Home Page -->
+<main>
+
+    <!-- Code For Title Box Using Bootstrap-->
+  <br>
+  <div class = "jumbotron jumbotron-fluid text-center bg-dark text-white mb-0"> <!-- Font Editing -->
+    <div class = "container-fluid p-6">
+      <h1 class = "display-6 font-weight-bold"> <%= title %> </h1>
+      <p class = "lead font-weight-bold"> Elevate Your Campus Experience with Thrilling Tournaments and Unforgettable Competitions. </p>
+      <br>
+    </div>
+  </div>
+  <br>
+
+  <!-- New Logo Container -->
+  <div class="container mt-4 text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="logo-box p-4">
+                <img id="logo" src="/assets/images/logo.png" alt= "Logo" class="img-fluid">
+            </div>
+        </div>
+    </div>
+  </div>
+  <br>
+
+  <!-- Banner Image -->
+  <div class="container-fluid position-relative">
+    <img src="/Assets/images/Banner.jpeg" alt="Banner Image" class="img-fluid w-100">
+
+    <!-- Text on the left, vertically centered -->
+    <div class="position-absolute top-50 start-0 translate-middle-y p-3 text-white text-start">
+        <p class="mb-0 font-weight-bold" style="font-size: 1.5rem;">Scroll Down To Get To Know Us More</p>
+    </div>
+  </div>
+
+  <!-- Description Box And Font Editing -->
+  <div class="container mt-6" >
+    <div class="row justify-content-center">
+        <div class="col-md-14">
+            <div class="description-box p-4">
+                <h2 class="display-4 mb-4 font-weight-bold">Discover a World of Excitement</h2>
+                <p class="lead">Welcome to Campus Tournaments, where passion meets competition. Immerse yourself in the vibrant world of thrilling tournaments and unforgettable competitions. Our community is dedicated to fostering a spirit of camaraderie, sportsmanship, and achievement. Join us in the pursuit of excellence as you engage in exciting challenges and create lasting memories. Whether you're a seasoned competitor or a newcomer, there's a place for you in our dynamic and inclusive environment. Discover the joy of pushing boundaries, celebrating victories, and building connections that last a lifetime. Campus Tournaments — where every challenge is an opportunity and every participant is a champion.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Calling Cards -->
+    <!-- Title Box And Font Editing -->
+  <div class="container mt-4 text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-14">
+            <div class="description-box p-4">
+                <h2 class="display-4 mb-6 font-weight-bold">Check Out A Few Of Our Top Performing Sports</h2>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Cards Section For Sports Offered! And Desined Using Bootstrap-->
+  <div class="container mt-4">
+      <div class="row">
+
+          <!-- Card for Soccer And Layout Design -->
+          <div class="col-md-3">
+              <div class="card">
+                  <img src="/Assets/images/soccer.jpeg" class="card-img-top" alt="Soccer Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Soccer</h5>
+                      <p class="card-text">Experience the thrill of soccer tournaments. Join us on the field and showcase your skills in exciting matches.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card for Swimming And Layout Design -->
+          <div class="col-md-3">
+              <div class="card">
+                  <img src="/Assets/images/swim.jpeg" class="card-img-top" alt="Swimming Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Swimming</h5>
+                      <p class="card-text">Dive into the world of swimming competitions. Compete against the best and make a splash in the pool.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card for Golf And Layout Design -->
+          <div class="col-md-3">
+              <div class="card">
+                  <img src="/Assets/images/golf.jpeg" class="card-img-top" alt="Golf Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Golf</h5>
+                      <p class="card-text">Tee off and join our golf tournaments. Experience the beauty of the course and showcase your golfing prowess.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card for Volleyball And Layout Design -->
+          <div class="col-md-3">
+              <div class="card">
+                  <img id="volley" src="/Assets/images/volley.jpeg" class="card-img-top" alt="Volleyball Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Volleyball</h5>
+                      <p class="card-text">Set, spike, and score in our volleyball tournaments. Join the action on the court and be part of the excitement.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <!-- Calling Cards For Pages With Links -->
+  <br>
+
+    <!-- Title Box and Font Editing -->
+  <div class="container mt-6 text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-14">
+            <div class="description-box p-6">
+                <h2 class="display-8 mb-6 font-weight-bold">Helpful Links Below...</h2>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Cards Section With Links To Tournament And Contact Us Pages -->
+  <div class="container mt-4">
+      <div class="row">
+
+          <!-- Card for Tournament Page And Layout Design -->
+          <div class="col-md-6">
+              <div class="card">
+                  <img id="healthysports" src="/Assets/images/sports.png" class="card-img-top" alt="Tournament Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Explore Tournaments</h5>
+                      <p class="card-text">Discover our exciting lineup of tournaments that cater to various interests and skill levels. Join the competition and showcase your talents!</p>
+                      <a href="/itemlist" class="btn btn-primary">Visit Tournaments</a> <!-- Link To The Tournament Page -->
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card for Contact Us Page And Layout Design -->
+          <div class="col-md-6">
+              <div class="card">
+                  <img id="contactus" src="/Assets/images/contact.avif" class="card-img-top" alt="Contact Us Image">
+                  <div class="card-body">
+                      <h5 class="card-title">Get in Touch</h5>
+                      <p class="card-text">Have questions or want to connect with us? Reach out to our team. We're here to assist you on your journey with Campus Tournaments.</p>
+                      <a href="/contact" class="btn btn-primary">Contact Us</a> <!-- Link To The Contact Us Page -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <br>
+
+<!-- Calling Saved Code From /partials -->
+<%- include partials/bottom_nav.ejs%>
+<%- include partials/footer.ejs%>

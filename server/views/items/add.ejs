@@ -1,0 +1,66 @@
+<!-- Coding/Commenting Done By Pavi Vijeyarajah -->
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <!-- Adding New Values To Different Table Headers -->
+            <form class="form" method="POST"> 
+                <div class="form-group">
+                    <label for="nameTextField">Name</label> <!-- Adding New Data To Name Field -->
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the name"
+                    name="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sportTextField">Sport</label> <!-- Adding New Data To Sport Field -->
+                    <input type="text" class="form-control"
+                    id="sportTextField"
+                    placeholder="Enter Sport name"
+                    name="Sport" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="enddateTextField">End Date</label> <!-- Adding New Data To EndData Field -->
+                    <input type="text" class="form-control"
+                    id="enddateTextField"
+                    placeholder="Enter the end of event ex. 10 Sep 1999"
+                    name="EndDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startdateTextArea">Start Date</label> <!-- Adding New Data To StartData Field -->
+                    <input type="text" class="form-control"
+                    id="startdateTextArea"
+                    placeholder="Enter the start of event ex. 10 Sep 1999"
+                    name="StartDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="typeTextField">Type</label> <!-- Adding New Data To Type Field -->
+                    <input type="text" class="form-control"
+                    id="typeTextField"
+                    placeholder="Enter type of tournament"
+                    name="Type" required>
+                </div>
+                
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button> <!-- Submitting New Added Data To The Database -->
+                
+                    <a href="/itemlist" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a> <!-- Canceling The Addition Of New Data -->
+            </form>
+        </div>
+
+    </div>
+</div>
+<%- include ../partials/bottom_nav.ejs %>  
+<%- include ../partials/footer.ejs %>
