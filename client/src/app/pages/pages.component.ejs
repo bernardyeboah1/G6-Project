@@ -1,0 +1,75 @@
+<main class="container">
+    <div class="row">
+  <br>
+  <!-- Title Box And Layout Design -->
+  <div class = "jumbotron jumbotron-fluid text-center bg-dark text-white mb-0">
+    <div class = "container-fluid p-6">
+      <h1 class = "display-6 font-weight-bold"> <%= title %> </h1>
+        <% if( typeof displayName == 'string' && displayName) { %>
+
+      <p class = "lead font-weight-bold"> View Or Update The Campus Tournaments! </p>
+      <br>
+      <!-- Button To Add A Tournament To The Database -->
+        <a href="/itemlist/add" class="btn btn-primary" role="button">
+        <i class="fa-solid fa-calendar-plus"></i> Add A Tournament   </a>
+    <br>
+    <% } %>
+    <br>
+    </div>
+  </div>
+  <br>
+        <!-- Table Design And Table Header Input -->
+        <div class="offset-md-1 col-md-9">    
+        <br>
+        <table class="table table-dark table-bordered table-striped table-hover">
+            <tr class="d-flex">
+            <% if( typeof displayName == 'string' && displayName) { %>
+                <!-- Table Header For Data From Database -->
+                <th class="text-center col-2">Name</th>
+                <th class="text-center col-2">Sport</th>
+                <th class="text-center col-2">End Date</th>
+                <th class="text-center col-2">Start Date</th>
+                <th class="text-center col-1">Type</th>
+                <th class="text-center col-2"></th> <!-- Allocation For Edit Button -->
+                <th class="text-center col-1"></th> <!-- Allocation For Delete Button -->
+                <% } else { %>
+                <th class="text-center col-3">Name</th>
+                <th class="text-center col-2">Sport</th>
+                <th class="text-center col-3">End Date</th>
+                <th class="text-center col-2">Start Date</th>
+                <th class="text-center col-2">Type</th>
+                <% } %>
+                
+            </tr>
+            <!--Iterates Through Values In The Database And Adds Values In The Website Database Accordingly With Edit And Delete Functionality-->
+            <% for(let count=0;count<ItemList.length;count++) { %>    
+            <tr class="d-flex">
+            <% if( typeof displayName == 'string' && displayName) { %>
+                <td class="text-center col-2"><%= ItemList[count].Name %></td>
+                <td class="text-center col-2"><%= ItemList[count].Sport %></td>
+                <td class="text-center col-2"><%= ItemList[count].EndDate %></td>
+                <td class="text-center col-2"><%= ItemList[count].StartDate %></td>
+                <td class="text-center col-1"><%= ItemList[count].Type %></td>
+                <td class="text-center col-3">
+                    <a href="/itemlist/edit/<%= ItemList[count]._id %>" 
+                        class="btn btn-primary btn-sm">
+                        <i class="fas fa-pencil-alt"></i> Edit</a> 
+                </td>
+                <td class="text-center col-2">
+                    <a href="/itemlist/delete/<%= ItemList[count]._id %>" 
+                        class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash-alt"></i> Delete</a>
+                </td>
+                <% } else { %>
+                 <td class="text-center col-3"><%= ItemList[count].Name %></td>
+                <td class="text-center col-2"><%= ItemList[count].Sport %></td>
+                <td class="text-center col-3"><%= ItemList[count].EndDate %></td>
+                <td class="text-center col-2"><%= ItemList[count].StartDate %></td>
+                <td class="text-center col-2"><%= ItemList[count].Type %></td>
+                <% } %>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+    </div>
+</main>

@@ -1,0 +1,20 @@
+/* Coding/Commenting Done By Hameem Quader */
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+  
+  body {
+    padding-top: 56px; /* Adjusted for fixed navbar height */
+    background-color: #f8f9fa; /* Light background color */
+  }
+  .container {
+    margin-top: 56px;
+  }
+  .container-fluid {
+    margin-top: 32px;
+  }
