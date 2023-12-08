@@ -12,11 +12,9 @@ let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
 let app = express();
 
-
 // create a user model instance
 let userModel = require('../models/user');
 let user = userModel.User;
-
 var router = express.Router();
 
 // view engine setup
@@ -47,22 +45,16 @@ app.use(session({
 // implement a user authentication
 passport.use(user.createStrategy());
  
-
 // seralize and deseralize the user information
 passport.serializeUser(user.serializeUser());
 passport.deserializeUser(user.deserializeUser());
-
 
 //Initialize passport 
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-
 //Initialize flash
 app.use(flash());
-
-
 
 //mongoose.connect(DB.URI);
 let indexRouter = require('../routes/index');

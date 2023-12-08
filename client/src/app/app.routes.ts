@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { TournamentComponent } from './pages/tournament/tournament.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-
+//creates routes to parts of the page
 export const routes: Routes = [
    {path: 'home', component: HomeComponent},
    {path: 'tournament', component: TournamentComponent},
