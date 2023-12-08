@@ -51,8 +51,6 @@ router.get('/add', requireAuth, async (req,res,next)=>{
     }
 }); 
 
-
-
 router.post('/add', requireAuth, async (req,res,next)=>{  //Give Route To Post Updated Data
     try{
         let newItem = Item({
@@ -74,6 +72,7 @@ router.post('/add', requireAuth, async (req,res,next)=>{  //Give Route To Post U
         });
     }
 });
+
 //Update Operation
 router.get('/edit/:id', requireAuth,   async (req,res,next)=>{   // Give Route To Update Data On The Database 
     try{
@@ -119,6 +118,7 @@ router.post('/edit/:id', requireAuth,  async (req,res,next)=>{  // Route To Post
         });
     }
 });
+
 //Delete Operation
 router.get('/delete/:id', requireAuth, async (req,res,next)=>{  //Give Route To Delete A Data Database 
     try{

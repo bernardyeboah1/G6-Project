@@ -7,7 +7,6 @@ let userModel = require('../models/user');
 let User = userModel.User;
 
  /* login page. */
-
  router.get('/login',function(req,res,next){
     if(!req.user)
     {
@@ -23,8 +22,7 @@ let User = userModel.User;
     }
   })
   
-   /* post router for  page. *
- 
+   /* post router for  page. */
    router.post('/login',function(req,res,next){
        passport.authenticate('local',function(err,User,info){
            // server error
@@ -66,7 +64,6 @@ let User = userModel.User;
    })
 
    /* post register for  page. */
-
    router.post('/register', function(req,res,next){
        let newUser = new User({
          username: req.body.username,
@@ -99,7 +96,6 @@ let User = userModel.User;
      })
 
  /* logout page. */
-
     router.get('/logout',function(req,res,next){
     req.logout(function(err){
         if(err)
@@ -109,7 +105,6 @@ let User = userModel.User;
     })
     res.redirect('/home')
     })
-
 
     /* home page. */
     router.get('/', (req, res, next)=> {
@@ -126,8 +121,5 @@ let User = userModel.User;
     router.get('/contact', (req, res, next)=> {
         res.render('contact', { title: 'Contact Us?', displayName: req.user ? req.user.displayName:'' });  //Render The Contact Page
     });
-
- 
-
-
+  
 module.exports = router;

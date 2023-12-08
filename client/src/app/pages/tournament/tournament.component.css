@@ -12,9 +12,11 @@ body {
     padding-top: 56px; /* Adjusted for fixed navbar height */
     background-color: #f8f9fa; /* Light background color */
   }
+
   .container {
     margin-top: 56px;
   }
+  
   .container-fluid {
     margin-top: 32px;
   }
