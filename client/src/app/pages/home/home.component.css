@@ -15,6 +15,12 @@ body {
   .container-fluid {
     margin-top: 32px;
   }
+  #volley {
+    height: 258px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 22px;
+  }
   #healthysports {
     width: auto;
     height: 254px;
@@ -24,24 +30,17 @@ body {
     width: auto;
     height: 254px;
   }
-  
-  
+  #links {
+    margin-bottom: 55px;
+  }
+  #contacttxt {
+    margin-bottom: 25px;
+  }
   .col-md-6 {
     padding-bottom: 20px;
   }
   
-  /* Adjusting button color */
-  .contact-form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-  }
-  
-  /* Styling the button on hover */
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
+
   /* Styling for the description section */
   .container mt-4 {
     padding: 40px 0; /* Adjusting the padding as needed */
@@ -66,7 +65,7 @@ body {
   
   /* Style for Logo Container */
   .logo-box {
-    
+    background-color: #111;
     padding: 20px;
     text-align: center;
   }
@@ -76,3 +75,5 @@ body {
     max-width: 100%;
     max-height: 100%;
   }
+  
+ 
